@@ -1,7 +1,8 @@
-// import Message from "./Message";
+import Message from "./Message";
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
+import LikeButton from "./components/LikeButton";
 import { useState } from "react";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <div>
-      {/* <Message /> */}
+      <Message />
       <ListGroup
         items={items}
         heading={heading}
@@ -31,6 +32,8 @@ function App() {
       <Button color="danger" onClick={() => setAlertVisiablity(true)}>
         Alert Button
       </Button>
+
+      <LikeButton onClick={() => console.log("Cliked")} />
     </div>
   );
 }
